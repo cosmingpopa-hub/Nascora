@@ -212,6 +212,9 @@ function AppContent() {
             <button onClick={()=>nav("checker")} style={{padding:"8px 16px",borderRadius:8,border:"none",fontSize:14,fontWeight:500,cursor:"pointer",background:page==="checker"?C.teal+"15":"transparent",color:page==="checker"?C.ocean:"#6B7280"}}>{t.nav.riskChecker}</button>
             <button onClick={()=>nav("content")} style={{padding:"8px 16px",borderRadius:8,border:"none",fontSize:14,fontWeight:500,cursor:"pointer",background:page==="content"?C.teal+"15":"transparent",color:page==="content"?C.ocean:"#6B7280"}}>{t.nav.evidenceLibrary}</button>
 
+        {/* ===== NAV LINK: EVIDENCE LIBRARY ===== */}
+        <a href="/evidence" style={{padding:"8px 16px",borderRadius:8,border:"none",fontSize:14,fontWeight:500,cursor:"pointer",background:"transparent",color:"#6B7280",textDecoration:"none",display:"flex",alignItems:"center",gap:5}}><span style={{fontSize:14}}>📚</span>{lang==="ro"?"Evidență":"Evidence"}</a>
+        {/* ===== END NAV LINK ===== */}
             {/* ===== NAV LINK: PRE-CONCEPTION CHECKLIST ===== */}
             <a href="/preconception-checklist" style={{padding:"8px 16px",borderRadius:8,border:"none",fontSize:14,fontWeight:500,cursor:"pointer",background:"transparent",color:"#6B7280",textDecoration:"none",display:"flex",alignItems:"center",gap:5}}><span style={{fontSize:14}}>📋</span>{checklistNavLabel}</a>
             {/* ===== END NAV LINK ===== */}
