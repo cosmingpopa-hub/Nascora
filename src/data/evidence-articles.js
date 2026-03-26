@@ -87,11 +87,10 @@ Aceste principii ghidează:
 1. Wilson JG. Environment and Birth Defects. Academic Press, 1973.
 2. Moore KL, Persaud TVN. The Developing Human. 11th ed. Elsevier, 2020.
 3. Sadler TW. Langman's Medical Embryology. 14th ed. 2019.`,
-      en: 'Wilson\'s six principles of teratology provide the scientific framework for understanding how environmental agents affect development during pregnancy.' 
+ the scientific framework for understanding how environmental agents affect development during pregnancy.'      en: 'Wilson\'s six principles of teratology provide the scientific framework for understanding how environmental agents affect development during pregnancy.' 
     },
     references: ['Wilson JG. Environment and Birth Defects. 1973.']
   },
-    references: ['Wilson JG. Environment and Birth Defects. 1973.']
   },
   {
     id: 'preconception-checklist',
