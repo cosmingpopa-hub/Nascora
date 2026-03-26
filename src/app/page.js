@@ -50,9 +50,10 @@ function RiskCard({ s }) {
 }
 
 function Landing({ onNav }) {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const checklistLabel = lang === "en" ? "Pre-Conception Checklist" : "Ghid Pre-Concepție";
   return (
     <div>
       <section style={{minHeight:"90vh",display:"flex",flexDirection:"column",justifyContent:"center",padding:"60px 24px",position:"relative",overflow:"hidden"}}>
@@ -65,6 +66,32 @@ function Landing({ onNav }) {
             <button onClick={()=>onNav("checker")} style={{padding:"14px 32px",background:C.midnight,color:"#fff",border:"none",borderRadius:10,fontSize:16,fontWeight:600,cursor:"pointer"}}>{t.hero.ctaPrimary}</button>
             <button onClick={()=>onNav("content")} style={{padding:"14px 32px",background:"transparent",color:C.ocean,border:`1.5px solid ${C.ocean}30`,borderRadius:10,fontSize:16,fontWeight:500,cursor:"pointer"}}>{t.hero.ctaSecondary}</button>
           </div>
+
+          {/* ===== PRE-CONCEPTION CHECKLIST BUTTON ===== */}
+          <div style={{marginTop:32,paddingTop:28,borderTop:`1px solid ${C.teal}20`}}>
+            <a href="/preconception-checklist" style={{
+              display:"inline-flex",alignItems:"center",gap:10,
+              padding:"14px 28px",
+              background:`linear-gradient(135deg, ${C.sage}18, ${C.teal}12)`,
+              border:`1.5px solid ${C.sage}40`,
+              borderRadius:12,
+              textDecoration:"none",
+              cursor:"pointer",
+              transition:"all 0.2s"
+            }}
+            onMouseOver={e=>{e.currentTarget.style.boxShadow=`0 4px 20px ${C.sage}30`;e.currentTarget.style.borderColor=C.sage;}}
+            onMouseOut={e=>{e.currentTarget.style.boxShadow="none";e.currentTarget.style.borderColor=`${C.sage}40`;}}
+            >
+              <span style={{fontSize:20}}>📋</span>
+              <span style={{display:"flex",flexDirection:"column",alignItems:"flex-start"}}>
+                <span style={{fontSize:15,fontWeight:700,color:C.midnight}}>{checklistLabel}</span>
+                <span style={{fontSize:12,color:C.gray}}>{lang==="en"?"49-step interactive preparation guide":"Ghid interactiv de pregătire în 49 de pași"}</span>
+              </span>
+              <span style={{fontSize:18,color:C.sage,marginLeft:4}}>→</span>
+            </a>
+          </div>
+          {/* ===== END CHECKLIST BUTTON ===== */}
+
         </div>
       </section>
 
@@ -174,6 +201,7 @@ function AppContent() {
   const { t, lang } = useLang();
   const [page, setPage] = useState("landing");
   const nav = (p) => { setPage(p); window.scrollTo({top:0,behavior:"smooth"}); };
+  const checklistNavLabel = lang === "en" ? "Pre-Conception" : "Pre-Concepție";
   return (
     <div style={{minHeight:"100vh"}}>
       <style>{`@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}`}</style>
@@ -183,6 +211,11 @@ function AppContent() {
           <div style={{display:"flex",alignItems:"center",gap:4}}>
             <button onClick={()=>nav("checker")} style={{padding:"8px 16px",borderRadius:8,border:"none",fontSize:14,fontWeight:500,cursor:"pointer",background:page==="checker"?C.teal+"15":"transparent",color:page==="checker"?C.ocean:"#6B7280"}}>{t.nav.riskChecker}</button>
             <button onClick={()=>nav("content")} style={{padding:"8px 16px",borderRadius:8,border:"none",fontSize:14,fontWeight:500,cursor:"pointer",background:page==="content"?C.teal+"15":"transparent",color:page==="content"?C.ocean:"#6B7280"}}>{t.nav.evidenceLibrary}</button>
+
+            {/* ===== NAV LINK: PRE-CONCEPTION CHECKLIST ===== */}
+            <a href="/preconception-checklist" style={{padding:"8px 16px",borderRadius:8,border:"none",fontSize:14,fontWeight:500,cursor:"pointer",background:"transparent",color:"#6B7280",textDecoration:"none",display:"flex",alignItems:"center",gap:5}}><span style={{fontSize:14}}>📋</span>{checklistNavLabel}</a>
+            {/* ===== END NAV LINK ===== */}
+
             <LangToggle/>
             <button onClick={()=>nav("landing")} style={{marginLeft:4,padding:"8px 18px",background:C.midnight,color:"#fff",border:"none",borderRadius:8,fontSize:13,fontWeight:600,cursor:"pointer"}}>{t.nav.joinWaitlist}</button>
           </div>
