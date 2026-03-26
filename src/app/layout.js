@@ -2,9 +2,46 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin", "latin-ext"] });
 
 export const metadata = {
-  title: "NASCORA \u2014 Siguran\u021Ba \u00EEn sarcin\u0103 | Pregnancy Safety",
-  description: "Verific\u0103 dac\u0103 medicamentele, suplimentele \u0219i expunerile sunt sigure \u00EEn sarcin\u0103. Evaluare a riscului bazat\u0103 pe dovezi clinice. N\u0103scut sigur. N\u0103scut informat.",
-  keywords: "siguran\u021Ba \u00EEn sarcin\u0103, medicamente sarcin\u0103, verificator teratogeni, preven\u021Bie malforma\u021Bii, pregnancy safety, teratogen checker",
+  metadataBase: new URL('https://www.nascora.health'),
+  title: "NASCORA — Siguranța în sarcină | Pregnancy Safety",
+  description: "Verifică dacă medicamentele, suplimentele și expunerile sunt sigure în sarcină. Evaluare a riscului bazată pe dovezi clinice. Născut sigur. Născut informat.",
+  keywords: "siguranța în sarcină, medicamente sarcină, verificator teratogeni, prevenție malformații, pregnancy safety, teratogen checker",
+  alternates: {
+    canonical: 'https://www.nascora.health',
+  },
+  openGraph: {
+    title: 'NASCORA — Siguranța în sarcină',
+    description: 'Verifică orice medicament, supliment sau expunere pentru siguranța în sarcină. Bazat pe dovezi clinice.',
+    url: 'https://www.nascora.health',
+    siteName: 'NASCORA',
+    locale: 'ro_RO',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'NASCORA — Platforma de prevenție teratologică',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NASCORA — Siguranța în sarcină',
+    description: 'Verifică orice medicament sau supliment pentru siguranța în sarcină.',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
