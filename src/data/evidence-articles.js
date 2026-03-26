@@ -95,7 +95,12 @@ export const evidenceArticles = [
 // Helper functions
 export const getArticleById = (id) => evidenceArticles.find(a => a.id === id);
 export const getArticlesByCategory = (cat) => evidenceArticles.filter(a => a.category === cat);
-export const getCategories = () => [...new Set(evidenceArticles.map(a => a.category))];
+export const getCategories = () => [
+  { id: 'teratologie', emoji: '🧬', label: { ro: 'Teratologie', en: 'Teratology' } },
+  { id: 'expuneri', emoji: '💊', label: { ro: 'Expuneri', en: 'Exposures' } },
+  { id: 'sarcina', emoji: '🤰', label: { ro: 'Sarcină', en: 'Pregnancy' } },
+  { id: 'alaptare', emoji: '🍼', label: { ro: 'Alăptare', en: 'Breastfeeding' } }
+];
 
 // Metadata
 export const evidenceLibraryMeta = {
