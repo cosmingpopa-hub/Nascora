@@ -82,20 +82,11 @@ export const metadata = {
     siteName: 'NASCORA',
     locale: 'ro_RO',
     type: 'website',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'NASCORA — Platforma de prevenție teratologică',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NASCORA — Siguranța în sarcină',
     description: 'Verifică orice medicament sau supliment pentru siguranța în sarcină.',
-    images: ['/og-image.png'],
   },
   robots: {
     index: true,
