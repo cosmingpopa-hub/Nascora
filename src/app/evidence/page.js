@@ -5,11 +5,8 @@ import { evidenceArticles, getCategories } from '@/data/evidence-articles';
 import { useLang } from '@/lib/lang';
 
 export default function EvidenceLibraryPage() {
-  const { lang } = useLang();
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  
-  const categories = getCategories();
-  const filteredArticles = selectedCategory === 'all' 
+  const { lang } = useLang();const [lang, setLang] = useState('ro'); // Temp: default to 'ro'// Temporary fix: removed useLang import  
+  const categories = getCategories();  const filteredArticles = selectedCategory === 'all' 
     ? evidenceArticles 
     : evidenceArticles.filter(a => a.category === selectedCategory);
 
