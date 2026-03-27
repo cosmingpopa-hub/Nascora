@@ -1,40 +1,135 @@
-export const metadata = { title: "Cookie Policy \u2014 NASCORA" };
+export const metadata = {
+  title: "Cookie Policy — NASCORA",
+};
 
 export default function Cookies() {
-  const s = { maxWidth: 720, margin: "0 auto", padding: "60px 24px", fontSize: 15, lineHeight: 1.8, color: "#374151" };
-  const h2 = { fontSize: 22, fontWeight: 700, color: "#0D1B2A", margin: "32px 0 12px" };
+  const s = {
+    maxWidth: 720,
+    margin: "0 auto",
+    padding: "60px 24px",
+    fontSize: 15,
+    lineHeight: 1.8,
+    color: "#374151",
+  };
+  const h2 = {
+    fontSize: 22,
+    fontWeight: 700,
+    color: "#0D1B2A",
+    margin: "32px 0 12px",
+  };
+
   return (
     <div style={s}>
-      <a href="/" style={{ fontSize: 13, color: "#5FA8D3", textDecoration: "none" }}>&larr; Back to NASCORA</a>
-      <h1 style={{ fontSize: 32, fontWeight: 800, color: "#0D1B2A", margin: "24px 0 8px" }}>Cookie Policy</h1>
-      <p style={{ color: "#9CA3AF", fontSize: 13 }}>Last updated: March 2026</p>
+      <a
+        href="/"
+        style={{
+          fontSize: 13,
+          color: "#5FA8D3",
+          textDecoration: "none",
+          display: "inline-block",
+          marginBottom: 16,
+        }}
+      >
+        &larr; Back to NASCORA
+      </a>
+
+      <h1
+        style={{
+          fontSize: 32,
+          fontWeight: 800,
+          color: "#0D1B2A",
+          margin: "24px 0 8px",
+        }}
+      >
+        Cookie Policy
+      </h1>
+      <p style={{ color: "#9CA3AF", fontSize: 13 }}>
+        Last updated: March 2026
+      </p>
 
       <h2 style={h2}>1. What are cookies?</h2>
-      <p>Cookies are small text files stored on your device when you visit a website. They help websites remember your preferences and improve your experience.</p>
+      <p>
+        Cookies are small text files that are stored on your device when you
+        visit a website. They allow the site to recognise your browser, remember
+        certain information and help us provide a more secure and reliable
+        experience.
+      </p>
 
       <h2 style={h2}>2. How NASCORA uses cookies</h2>
-      <p>NASCORA uses a minimal cookie approach. We believe in privacy by design.</p>
+      <p>
+        NASCORA uses cookies and similar technologies mainly to:
+      </p>
+      <ul>
+        <li>Ensure the basic technical functioning of the site.</li>
+        <li>Maintain security and prevent abuse.</li>
+        <li>
+          Understand aggregate usage patterns (for example, which pages are
+          visited most) to improve the product.
+        </li>
+      </ul>
 
-      <h2 style={h2}>3. Types of cookies we use</h2>
+      <h2 style={h2}>3. Types of cookies</h2>
+      <p>We may use the following categories:</p>
+      <ul>
+        <li>
+          <strong>Strictly necessary cookies</strong> – required for the site to
+          function (for example, load balancing, basic security).
+        </li>
+        <li>
+          <strong>Performance / analytics cookies</strong> – help us understand
+          how visitors use the site in aggregate, so we can improve content and
+          usability.
+        </li>
+      </ul>
+      <p>
+        We do not use cookies to display third-party advertising or to sell your
+        data to advertisers.
+      </p>
 
-      <div style={{ background: "#F9FAFB", borderRadius: 12, padding: 20, margin: "16px 0" }}>
-        <p style={{ margin: "0 0 4px", fontWeight: 600, color: "#0D1B2A" }}>Essential cookies (always active)</p>
-        <p style={{ margin: 0, fontSize: 13, color: "#6B7280" }}><strong>nascora_cookie_consent:</strong> Stores your cookie preference (accepted/declined). Expires: 1 year. This cookie is necessary for the website to function and cannot be switched off.</p>
-      </div>
+      <h2 style={h2}>4. Third-party services</h2>
+      <p>
+        Some cookies may be set by third-party providers that help us deliver
+        the service, such as analytics or infrastructure providers. These
+        providers act as processors or independent controllers under applicable
+        law, and we aim to work only with reputable services that offer adequate
+        data protection safeguards.
+      </p>
 
-      <div style={{ background: "#F9FAFB", borderRadius: 12, padding: 20, margin: "16px 0" }}>
-        <p style={{ margin: "0 0 4px", fontWeight: 600, color: "#0D1B2A" }}>Analytics cookies (only with your consent)</p>
-        <p style={{ margin: 0, fontSize: 13, color: "#6B7280" }}>If you accept cookies, we use Plausible Analytics \u2014 a privacy-focused analytics tool that does not use cookies, does not collect personal data, and is fully GDPR-compliant. No individual tracking occurs.</p>
-      </div>
+      <h2 style={h2}>5. Consent and browser settings</h2>
+      <p>
+        Where required by law, we will ask for your consent before setting
+        non-essential cookies. You can withdraw or modify your consent at any
+        time using your browser settings or, where available, through the
+        cookie preferences banner.
+      </p>
+      <p>
+        Most browsers allow you to block or delete cookies through their settings.
+        However, blocking certain cookies may impact the functionality or
+        performance of the site.
+      </p>
 
-      <h2 style={h2}>4. Cookies we do NOT use</h2>
-      <p>NASCORA does not use: advertising or marketing cookies, social media tracking cookies, third-party cookies for profiling, or any cookies that track individual behavior across websites.</p>
+      <h2 style={h2}>6. Risk Checker and cookies</h2>
+      <p>
+        The Risk Checker processes pregnancy-related inputs locally in your
+        browser and, by design, does not send those inputs to our servers. Any
+        cookies used for the Risk Checker are limited to ensuring technical
+        functionality and security of the overall service, not to store your
+        medical inputs.
+      </p>
 
-      <h2 style={h2}>5. Managing cookies</h2>
-      <p>You can change your cookie preferences at any time by clearing your browser cookies and revisiting the site. You can also configure your browser to block cookies entirely. Note that blocking essential cookies may affect site functionality.</p>
+      <h2 style={h2}>7. Updates to this Cookie Policy</h2>
+      <p>
+        We may update this Cookie Policy from time to time to reflect changes in
+        our use of cookies or in applicable regulations. Material changes will
+        be indicated by updating the “Last updated” date and, where
+        appropriate, communicated more prominently.
+      </p>
 
-      <h2 style={h2}>6. Contact</h2>
-      <p>For questions about our cookie practices, contact us at privacy@nascora.com.</p>
+      <h2 style={h2}>8. Contact</h2>
+      <p>
+        If you have any questions about our use of cookies, you can contact us
+        at contact@devaieood.com.
+      </p>
     </div>
   );
 }
