@@ -150,9 +150,18 @@ function Checker() {
   const [selected, setSelected] = useState(null);
   const inputRef = useRef(null);
   const results = useMemo(()=>{
-    if(!query.trim()) return [];
-    const q=query.toLowerCase();
-    return TERATOGEN_DB.filter(s=>loc(s.name,lang).toLowerCase().includes(q)||s.generic.toLowerCase().includes(q)||s.brand.toLowerCase().includes(q)||loc(s.category,lang).toLowerCase().includes(q));
+    if(!query.trim()||query.trim().length<2) return [];
+    const q=query.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+    return TERATOGEN_DB.map(s=>{
+      let score=0;
+      const ne=s.name.en.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      const nr=s.name.ro.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      if(ne===q||nr===q)score+=100;else if(ne.startsWith(q)||nr.startsWith(q))score+=80;else if(ne.includes(q)||nr.includes(q))score+=60;
+      if(s.generic){const g=s.generic.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');if(g===q)score+=90;else if(g.startsWith(q))score+=70;else if(g.includes(q))score+=50;s.generic.split(',').forEach(p=>{const t=p.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');if(t===q)score=Math.max(score,90);else if(t.startsWith(q))score=Math.max(score,70);else if(t.includes(q))score=Math.max(score,50);});}
+      if(s.brand){s.brand.split(',').forEach(b=>{const t=b.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');if(t===q)score=Math.max(score,85);else if(t.startsWith(q))score=Math.max(score,65);else if(t.includes(q))score=Math.max(score,45);});}
+      const ce=s.category.en.toLowerCase();const cr=s.category.ro.toLowerCase();if(ce.includes(q)||cr.includes(q))score+=20;
+      return{s,score};
+    }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).map(x=>x.s);
   },[query,lang]);
   useEffect(()=>{inputRef.current?.focus();},[]);
   const quickSearches = lang==="ro"?["Ibuprofen","Cafeină","Acid folic","Amoxicilină","Vitamina A","Paracetamol"]:["Ibuprofen","Caffeine","Folic Acid","Amoxicillin","Vitamin A","Metformin"];
@@ -217,6 +226,9 @@ function AppContent() {
         {/* ===== END NAV LINK ===== */}
             {/* ===== NAV LINK: PRE-CONCEPTION CHECKLIST ===== */}
             <a href="/preconception-checklist" style={{padding:"8px 16px",borderRadius:8,border:"none",fontSize:14,fontWeight:500,cursor:"pointer",background:"transparent",color:"#6B7280",textDecoration:"none",display:"flex",alignItems:"center",gap:5}}><span style={{fontSize:14}}>📋</span>{checklistNavLabel}</a>
+            {/* ===== END NAV LINK ===== */}
+            {/* ===== NAV LINK: CALCULATOR ===== */}
+            <a href="/calculator" style={{padding:"8px 16px",borderRadius:8,border:"none",fontSize:14,fontWeight:500,cursor:"pointer",background:"transparent",color:"#6B7280",textDecoration:"none",display:"flex",alignItems:"center",gap:5}}><span style={{fontSize:14}}>🤰</span>{lang==="ro"?"Calculator":"Calculator"}</a>
             {/* ===== END NAV LINK ===== */}
 
             <LangToggle/>
