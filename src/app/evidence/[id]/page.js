@@ -2,10 +2,10 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getArticleById } from '@/data/evidence-articles';
-import { useLang } from '@/lib/lang';
+import { useState } from 'react';
 
 export default function ArticlePage({ params }) {
-  const { lang, toggleLang } = useLang();
+    const [lang, setLang] = useState('ro'); // Temp: default to 'ro'
   const article = getArticleById(params.id);
 
   if (!article) {
