@@ -7,6 +7,8 @@ import { useState } from 'react';
 export default function ArticlePage({ params }) {
     const [lang, setLang] = useState('ro'); // Temp: default to 'ro'
   const article = getArticleById(params.id);
+    
+  const toggleLang = () => setLang(lang === 'ro' ? 'en' : 'ro');
 
   if (!article) {
     notFound();
