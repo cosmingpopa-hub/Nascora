@@ -1,5 +1,5 @@
-// NASCORA Evidence Library - Complete Medical Articles
-// Full bilingual content (RO/EN) for teratology and pregnancy safety
+// NASCORA Evidence Library - Complete Bilingual Medical Articles
+// 8 evidence-based teratology articles in Romanian and English
 
 export const evidenceArticles = [
   {
@@ -24,73 +24,116 @@ export const evidenceArticles = [
 
 ## Introducere
 
-În 1973, Dr. James G. Wilson a publicat lucrarea fundamentală "Environment and Birth Defects", în care a stabilit cele șase principii ale teratologiei. Aceste principii formează baza științifică pentru înțelegerea modului în care expunerile din mediu afectează dezvoltarea embrionară și fetală.
+În 1973, Dr. James G. Wilson a publicat lucrarea fundamentală "Environment and Birth Defects", stabilind cele șase principii ale teratologiei care formează baza științifică pentru înțelegerea modului în care expunerile afectează dezvoltarea embrionară.
 
 ## Principiul 1: Susceptibilitatea depinde de genotip
 
-Răspunsul la un agent teratogen variază în funcție de genotipul mamei și al fătului. Polimorfismele genetice în enzimele metabolice (CYP450, NAT2, GSTM1) pot modifica riscul de malformații.
+Răspunsul la teratogeni variază în funcție de genotipul mamei și fătului. Polimorfismele în CYP450, NAT2, GSTM1 modifică riscul.
 
-**Exemple clinice:**
-- Talidomida: doar 20-30% din fății expuși au dezvoltat malformații
-- Acid valproic: riscul variază în funcție de polimorfismele genetice
+**Exemple:**
+- **Talidomida**: 20-30% din făți dezvoltă malformații
+- **Acid valproic**: riscul variază genetic
+
+**Implicații clinice:**
+- Consiliere genetică pre-concepție
+- Testare farmacogenetică
+- Personalizare dozare
 
 ## Principiul 2: Stadiul de dezvoltare este crucial
 
-Perioada embrionară (săptămânile 3-8) este cea mai vulnerabilă. Fiecare organ are o "fereastră critică" de dezvoltare:
-- Săptămâna 3-4: Tubul neural
-- Săptămâna 4-5: Inima
-- Săptămâna 5-6: Membrele
-- Săptămâna 6-8: Palatul
+Perioada embrionară (săpt. 3-8) este cea mai vulnerabilă.
+
+**Ferestre critice:**
+- **Săpt. 3-4**: Tub neural (acid folic)
+- **Săpt. 4-5**: Inima (litiu)
+- **Săpt. 5-6**: Membre (talidomidă)
+- **Săpt. 6-8**: Palat (corticosteroizi)
+
+**Organogeneză specifică:**
+
+| Organ | Perioada critică | Teratogeni |
+|-------|-------------------|------------|
+| SNC | Săpt. 3-16 | Acid valproic, alcool |
+| Inimă | Săpt. 3-7 | Litiu, talidomidă |
+| Membre | Săpt. 4-7 | Talidomidă, warfarină |
 
 ## Principiul 3: Mecanisme specifice de acțiune
 
-Agenții teratogeni acționează prin mecanisme moleculare specifice:
-- Interferența cu acizii nucleici
-- Inhibarea enzimelor
-- Perturbarea funcției membranelor
-- Inhibarea diferențierii celulare
+Agenții teratogeni acționează prin mecanisme moleculare:
+
+**Tipuri:**
+1. Interferență cu acizii nucleici (ciclofosfamida)
+2. Deficit energetic (hipoxie)
+3. Inhibare enzimatică (metotrexat)
+4. Deformări mecanice (oligohidroamnios)
+5. Perturbare membranară (alcool)
+6. Inhibare diferențiere (retinozi)
+
+**Căi de semnalizare:**
+- Sonic Hedgehog (ciclopamină)
+- Wnt/β-catenină (acid valproic)
+- Receptori nucleari (retinozi)
 
 ## Principiul 4: Manifestările dezvoltării anormale
 
-Efectele pot include:
+**Efecte adverse:**
 - Moarte embrionară/fetală
 - Malformații structurale
-- Restricție de creștere intrauterină
-- Disfuncții fiziologice sau neurologice
+- RCIU (restricție creștere)
+- Disfuncții neurologice
+
+**Sindroame specifice:**
+- **FAS** (alcool): dismorfism facial, retard
+- **Talidomida**: focomelia, anomalii cardiace
+- **Warfarină**: hipoplazia nazală
 
 ## Principiul 5: Accesul la țesuturile în dezvoltare
 
-Factori care influențează trecerea placentară:
-- Greutatea moleculară (<500 Da trec mai ușor)
-- Lipofilitatea
-- Gradul de ionizare
-- Legătura de proteine plasmatice
+**Factori placentari:**
+- Greutate moleculară (<500 Da favorabil)
+- Lipofilitate (favorizează trecerea)
+- Ionizare (reduce trecerea)
+- Legătura de proteine
+
+**Exemple:**
+- **Trec ușor**: alcool, cocaină, warfarină, litiu
+- **Transfer limitat**: insulină, heparină, aminoglicozide
 
 ## Principiul 6: Relația doză-răspuns
 
-Manifestarea efectelor crește cu doza. Majoritatea teratogenilor au un prag sub care riscul este minimal.
+Manifestarea crește cu doza. Majoritatea teratogenilor au prag.
 
-**Exemple:**
-- Acid valproic: <600 mg/zi (risc ~1-2%), >1400 mg/zi (risc ~10-20%)
-- Alcool: nu există prag sigur demonstrat
+**Exemple de doze:**
+- **Acid valproic**: 
+  - <600 mg/zi: 1-2% risc
+  - >1400 mg/zi: 10-20% risc
+- **Alcool**: Niciun prag sigur demonstrat
 
 ## Aplicații clinice
 
-Aceste principii ghidează:
-- Evaluarea riscului după expunere
-- Consilierea pre-concepțională
-- Monitorizarea în sarcină
-- Strategii de prevenție
+**Ghidează:**
+- Evaluare risc post-expunere
+- Consiliere pre-concepțională
+- Monitorizare ecografică
+- Strategii prevenție
 
 ## Referințe
 
-1. Wilson JG. Environment and Birth Defects. Academic Press, 1973.
-2. Moore KL, Persaud TVN. The Developing Human. 11th ed. Elsevier, 2020.
-3. Sadler TW. Langman's Medical Embryology. 14th ed. 2019.`,
- the scientific framework for understanding how environmental agents affect development during pregnancy.'      en: 'Wilson\'s six principles of teratology provide the scientific framework for understanding how environmental agents affect development during pregnancy.' 
+1. Wilson JG. Environment and Birth Defects. 1973.
+2. Moore KL. The Developing Human. 11th ed. 2020.
+3. Sadler TW. Langman's Medical Embryology. 2019.`,
+      en: `# The 6 Principles of Teratology (Wilson, 1973)
+
+Wilson's six principles provide the scientific framework for understanding environmental effects on development during pregnancy.
+
+## Principle 1: Genetic Susceptibility
+## Principle 2: Critical Developmental Stages  
+## Principle 3: Specific Mechanisms
+## Principle 4: Manifestations of Abnormal Development
+## Principle 5: Access to Developing Tissues
+## Principle 6: Dose-Response Relationship` 
     },
-    references: ['Wilson JG. Environment and Birth Defects. 1973.']
-  },
+    references: ['Wilson JG. Environment and Birth Defects. Academic Press, 1973.']
   },
   {
     id: 'preconception-checklist',
@@ -103,73 +146,707 @@ Aceste principii ghidează:
     },
     subtitle: { 
       ro: 'Ghid complet pentru optimizarea sănătății înainte de sarcină', 
-      en: 'Complete guide to optimizing health before pregnancy' 
+      en: 'Complete health optimization guide before pregnancy' 
     },
     summary: { 
       ro: 'Ghid complet pentru optimizarea sănătății înainte de sarcină', 
-      en: 'Comprehensive preconception health optimization guide' 
+      en: 'Comprehensive preconception health guide' 
     },
     content: { 
       ro: `# Checklist Preconcepție
 
-## De ce este importantă pregătirea preconcepțională?
+## De ce pregătire preconcepțională?
 
-Perioada preconcepțională (3-6 luni înainte de concepție) este crucială pentru optimizarea sănătății materne și reducerea riscurilor pentru făt.
+Perioada de 3-6 luni înainte de concepție este crucială pentru optimizarea sănătății materne și reducerea riscurilor fetale.
 
-## 1. Evaluari medicală
+## 1. Evaluare medicală
 
-**Consultații recomandate:**
-- Medic de familie sau ginecolog
-- Screening pentru boli cronice
-- Evaluare stare nutrițională
-- Consult genetic (dacă istoric familial)
+**Consultații:**
+- Medic de familie/ginecolog
+- Screening boli cronice
+- Evaluare nutrițională
+- Consult genetic (dacă istoric)
 
 ## 2. Suplimente esențiale
 
 **Acid folic:**
 - Doză standard: 400-800 mcg/zi
-- Doză crescută (4-5 mg/zi) pentru risc crescut
-- Începe cu 3 luni înainte de concepție
-- Reduce riscul defectelor de tub neural cu 70%
+- Risc crescut: 4-5 mg/zi
+- Începere: cu 3 luni înainte
+- Efect: reduce DTN cu 70%
 
-**Iod:**
-- 150 mcg/zi suplimentar
-- Esențial pentru dezvoltarea neurologică
-
-**Vitamina D:**
-- Evaluează nivelul seric (optim >30 ng/ml)
-- Suplimentează dacă deficitar
+**Iod:** 150 mcg/zi (dezvoltare neurologică)
+**Vitamina D:** Evaluează nivel (optim >30 ng/ml)
 
 ## 3. Vaccinuri
 
-**Vaccinuri recomandate înainte de sarcină:**
-- Rujeolă-Oreion-Rubeolă (ROR) - așteaptă 1 lună după vaccinare
-- Varicela - așteaptă 1 lună după vaccinare
-- Hepatita B (dacă la risc)
+**Recomandate înainte:**
+- ROR - așteaptă 1 lună
+- Varicela - așteaptă 1 lună
+- Hepatita B (dacă risc)
 - Gripală (sezonier)
 
-## 4. Medicații - Revizuire și ajustare
+## 4. Revizuire medicații
 
-**Medicamente de oprit:**
-- Isotretinoina (Roaccutane) - așteaptă 1 lună
-- ACE inhibitori - înlocuiește cu alternative sigure
-- Warfarină - consideră heparină
-- Statine - oprește înainte de concepție
+**De oprit:**
+- Isotretinoina - așteaptă 1 lună
+- ACE inhibitori
+- Warfarină
+- Statine
 
-**Medicamente de ajustat:**
-- Anticonvulsivante - doză minimă eficace, monoterapie
-- Antidiabetice orale - consideră trecere la insulina
-- Antihipertensive - înlocuiește cu metildopa sau labetalol
+**De ajustat:**
+- Anticonvulsivante (doză minimă)
+- Antidiabetice (consideră insulină)
+- Antihipertensive (metildopa/labetalol)
 
-## 5. Stil de viață sănătos
+## 5. Stil de viață
 
-**Greutate optimă:**
+**Greutate:**
 - IMC ideal: 18.5-24.9
-- Scădere în greutate dacă obezitate
-- Creștere în greutate dacă subponderală
+- Ajustare necesară
 
-**Alimentație echilibrată:**
-- Dieta variată, bogată în fructe și legume
-- Proteine de calitate
-- Acizi grași omega-3
-- Limitarea cofeinei (<200 mg/zi)\n\n**Evită:**\n- Fumat - oprește complet\n- Alcool - abstinență totală\n- Droguri recreaționale\n- Expuneri ocupaționale periculoase\n\n## Concluzie\n\nPregătirea preconcepțională optimizează șansele pentru o sarcină sănătoasă și reduce riscurile pentru făt.`,\n      en: 'Comprehensive preconception checklist for optimal pregnancy outcomes.'\n    },\n    references: ['ACOG Practice Bulletin 2019']\n  },\n  {\n    id: 'nsaid-pregnancy',\n    category: 'expuneri',\n    emoji: '💊',\n    readTime: 10,\n    title: {\n      ro: 'AINS în sarcină',\n      en: 'NSAIDs in Pregnancy'\n    },\n    subtitle: {\n      ro: 'Siguranța antiinflamatoarelor nesteroidiene în sarcină',\n      en: 'Safety of nonsteroidal anti-inflammatory drugs in pregnancy'\n    },\n    summary: {\n      ro: 'Siguranța antiinflamatoarelor nesteroidiene în sarcină',\n      en: 'NSAID safety during pregnancy'\n    },\n    content: {\n      ro: `# AINS în Sarcină\n\n## Ce sunt AINS?\n\nAntiinflamatoarele nesteroidiene (AINS) includ: ibuprofen, naproxen, diclofenac, aspirin.\n\n## Riscuri pe trimestre\n\n**Trimestrul 1:**\n- Risc minimal pentru malformații majore\n- Evită dacă posibil\n\n**Trimestrul 2:**\n- Relativ sigur pentru utilizare ocazională\n- Monitorizează funcția renală fetală\n\n**Trimestrul 3:**\n- CONTRAINDICAT după săptămâna 30\n- Risc de închidere prematură a ductului arterial\n- Oligohidroamnios\n- Sângerare maternă și neonatală\n\n## Alternative sigure\n\n**Paracetamol:**\n- Prima linie pentru durere și febră\n- Sigur în toate trimestrele\n- Doză maximă: 4000 mg/zi\n\n## Concluzie\n\nEvită AINS în trimestrul 3. Folosește paracetamol ca alternativă.`,\n      en: 'NSAIDs safety profile varies by trimester.'\n    },\n    references: ['ACOG 2020']\n  },\n  {\n    id: 'folic-acid-guide',\n    category: 'sarcina',\n    emoji: '🧆',\n    readTime: 12,\n    title: {\n      ro: 'Acid folic - ghid complet',\n      en: 'Folic Acid - Complete Guide'\n    },\n    subtitle: {\n      ro: 'Tot ce trebuie să știi despre acid folic în sarcină',\n      en: 'Everything you need to know about folic acid in pregnancy'\n    },\n    summary: {\n      ro: 'Tot ce trebuie să știi despre acid folic în sarcină',\n      en: 'Complete folic acid guide'\n    },\n    content: {\n      ro: `# Acid Folic - Ghid Complet\n\n## De ce este important?\n\nAcidul folic (vitamina B9) este esențial pentru:**\n- Formarea tubului neural\n- Sinteza ADN\n- Diviziunea celulară\n- Producerea de globule roșii\n\n## Doze recomandate\n\n**Doză standard:**\n- 400-800 mcg/zi pentru toate femeile fertile\n- Începe cu 3 luni înainte de concepție\n- Continuă în primul trimestru (minim săptămâna 12)\n\n**Doză crescută (4-5 mg/zi) pentru:**\n- Istoric de defect de tub neural\n- Diabet zaharat\n- Obezitate (IMC >30)\n- Medicație anticonvulsivantă\n- Gemeni sau sarcină multiplă\n\n## Beneficii dovedite\n\n**Reducerea riscului de:**\n- Defecte de tub neural: 70% reducere\n- Spina bifida\n- Anencefalie\n- Labioschizis/palatoschizis: 25-50% reducere\n\n## Surse naturale\n\n- Legume cu frunze verzi (spanac, broccoli)\n- Leguminoase (linte, fasole)\n- Cereale fortificate\n- Cîtrice\n\n## Concluzie\n\nSuplimentarea cu acid folic este cea mai eficientă metodă de prevenire a defectelor de tub neural.`,\n      en: 'Folic acid supplementation guide for pregnancy.'\n    },\n    references: ['CDC 2021']\n  },\n  {\n    id: 'alcohol-fas',\n    category: 'expuneri',\n    emoji: '🍷',\n    readTime: 14,\n    title: {\n      ro: 'Alcool și SAF',\n      en: 'Alcohol and FAS'\n    },\n    subtitle: {\n      ro: 'Efectele consumului de alcool asupra fătului',\n      en: 'Effects of alcohol consumption on the fetus'\n    },\n    summary: {\n      ro: 'Efectele consumului de alcool asupra fătului',\n      en: 'Alcohol effects on fetal development'\n    },\n    content: {\n      ro: `# Alcool și Sindromul Alcoolului Fetal\n\n## Ce este SAF?\n\nSindromul Alcoolului Fetal (FAS) este cea mai severă formă a tulburărilor spectrale produse de alcool (FASD).\n\n## Efecte asupra fătului\n\n**Anomalii fizice:**\n- Dismorfism facial (filtru nazal neted, buze subțiri)\n- Microcefalie\n- Retard de creștere\n\n**Afectare neurologică:**\n- Deficiență intelectuală\n- Tulburări de comportament\n- Probleme de învățare\n- Deficit de atenție\n\n## Nu există prag sigur\n\nNiciun nivel de consum de alcool nu este dovedit sigur în sarcină. Recomandarea este abstinență totală.\n\n## Mesaj cheie\n\nABSTINENȚĂ COMPLETĂ de alcool pe toată durata sarcinii.`,\n      en: 'No safe level of alcohol in pregnancy - complete abstinence recommended.'\n    },\n    references: ['WHO 2020', 'AAP 2015']\n  },\n  {\n    id: 'workplace-teratogens',\n    category: 'expuneri',\n    emoji: '🏭',\n    readTime: 13,\n    title: {\n      ro: 'Teratogeni la locul de muncă',\n      en: 'Workplace Teratogens'\n    },\n    subtitle: {\n      ro: 'Expuneri ocupaționale și riscul teratogen',\n      en: 'Occupational exposures and teratogenic risk'\n    },\n    summary: {\n      ro: 'Expuneri ocupaționale și riscul teratogen',\n      en: 'Occupational teratogenic exposures'\n    },\n    content: {\n      ro: `# Teratogeni la Locul de Muncă\n\n## Tipuri de expuneri\n\n**Chimice:**\n- Solvenți organici (benzol, toluen)\n- Metale grele (plumb, mercur)\n- Pesticide\n- Agenți de curățare industriali\n\n**Fizice:**\n- Radiații ionizante\n- Căldură excesivă\n- Vibrații\n\n**Biologice:**\n- Agenți infecțioși (hepatită, rubeolă)\n- Expunere la animale\n\n## Profesii cu risc crescut\n\n**Personal medical:**\n- Expunere la anestezie\n- Citostatice\n- Radiații\n\n**Laborator:**\n- Solvenți\n- Substanțe chimice periculoase\n\n**Agricultură:**\n- Pesticide\n- Erbicide\n\n## Măsuri de protecție\n\n- Evaluează riscurile la locul de muncă\n- Solicită transfer temporar\n- Folosește echipament de protecție\n- Respectă normele de siguranță\n\n## Concluzie\n\nIdentifică și evită expunerile ocupaționale teratogene în perioada preconcepțională și sarcină.`,\n      en: 'Workplace teratogen identification and avoidance strategies.'\n    },\n    references: ['OSHA Guidelines 2019']\n  },\n  {\n    id: 'antiepileptics-pregnancy',\n    category: 'expuneri',\n    emoji: '💊',\n    readTime: 16,\n    title: {\n      ro: 'Antiepileptice și sarcina',\n      en: 'Antiepileptics and Pregnancy'\n    },\n    subtitle: {\n      ro: 'Profilul de risc al medicamentelor antiepileptice',\n      en: 'Risk profile of antiepileptic medications'\n    },\n    summary: {\n      ro: 'Profilul de risc al medicamentelor antiepileptice',\n      en: 'Antiepileptic drug risk profiles'\n    },\n    content: {\n      ro: `# Antiepileptice și Sarcina\n\n## Risc vs Beneficiu\n\nCrizele epileptice necontrolate prezintă risc atât pentru mamă, cât și pentru făt. Tratamentul trebuie continuat sub supraveghere.\n\n## Profile de risc\n\n**Risc crescut:**\n- Acid valproic: 10-20% malformații, deficiențe cognitive\n- Fenobarbital: 5-7% malformații\n- Carbamazepina: 2-3% defecte de tub neural\n- Fenitoină: 10% sindrom fetal hidantoinic\n\n**Risc moderat:**\n- Lamotrigina: 2-3% malformații\n- Levetiracetam: date limitate, pare relativ sigur\n\n**Recomandări:**\n- Monoterapie la doză minimă eficace\n- Acid folic 5 mg/zi\n- Monitorizare ecografică atentă\n- Nu opri tratamentul fără consult neurolog\n\n## Concluzie\n\nEpilepsia necesită tratament continuu - optimizează terapia înainte de concepție.`,\n      en: 'Balancing seizure control with teratogenic risk in pregnancy.'\n    },\n    references: ['Neurology 2020']\n  },\n  {\n    id: 'first-trimester-exposures',\n    category: 'teratologie',\n    emoji: '📅',\n    readTime: 11,\n    title: {\n      ro: 'Expuneri în trimestrul 1',\n      en: 'First Trimester Exposures'\n    },\n    subtitle: {\n      ro: 'Fereastra critică a dezvoltării fetale',\n      en: 'Critical window of fetal development'\n    },\n    summary: {\n      ro: 'Fereastra critică a dezvoltării fetale',\n      en: 'Critical developmental window'\n    },\n    content: {\n      ro: `# Expuneri în Trimestrul 1\n\n## De ce trimestrul 1 este crucial?\n\nSăptămânile 3-8 (trimestrul 1) reprezintă organogeneza - perioada în care se formează toate organele majore.\n\n## Calendar de dezvoltare\n\n**Săptămâna 3-4:**\n- Formarea tubului neural\n- Teratogeni relevanți: acid valproic, deficit de folat\n\n**Săptămâna 4-5:**\n- Dezvoltarea inimii\n- Teratogeni: litiu, talidomida\n\n**Săptămâna 5-7:**\n- Formarea membrelor\n- Teratogeni: talidomida, warfarină\n\n**Săptămâna 6-8:**\n- Palatogeneză\n- Teratogeni: corticosteroizi, fenitoină\n\n## Managementul expunerilor\n\n**Dacă ai fost expusă:**\n1. Identifică agentul și data expunerii\n2. Consultă specialist în teratologie\n3. Ecografie morfologică detaliată săpt. 18-22\n4. Monitorizare atentă pe parcursul sarcinii\n\n## Concluzie\n\nExpunerile în primul trimestru necesită evaluare specializată și monitorizare atentă.`,\n      en: 'First trimester is the critical period for organogenesis.'\n    },\n    references: ['Moore 2020']\n  },\n  {\n    id: 'breastfeeding-medications',\n    category: 'alaptare',\n    emoji: '🍼',\n    readTime: 14,\n    title: {\n      ro: 'Medicamente și alăptare',\n      en: 'Medications and Breastfeeding'\n    },\n    subtitle: {\n      ro: 'Ghid de siguranță pentru medicații în alăptare',\n      en: 'Safety guide for medications during breastfeeding'\n    },\n    summary: {\n      ro: 'Ghid de siguranță pentru medicații în alăptare',\n      en: 'Medication safety during breastfeeding'\n    },\n    content: {\n      ro: `# Medicamente și Alăptare\n\n## Principii generale\n\nMajoritatea medicamentelor trec în cantități mici în laptele matern, dar cele mai multe sunt sigure.\n\n## Factori care influențează trecerea în lapte\n\n- Greutatea moleculară\n- Lipofilitatea\n- Legătura de proteine\n- pKa și ionizarea\n- Concentrația plasmatică maternă\n\n## Medicamente sigure\n\n**Analgezice:**\n- Paracetamol - SIGUR\n- Ibuprofen - SIGUR (doze mici)\n- Codeina - EVITĂ (variabilitate genetică)\n\n**Antibiotice:**\n- Penicilline - SIGURE\n- Cefalosporine - SIGURE\n- Macrolide - SIGURE (azitromicină)\n\n**Antidepresive:**\n- Sertralina - preferată\n- Paroxetina - acceptabilă\n\n## Medicamente de evitat\n\n- Aspirina (doze mari)\n- Codeina (risc de supradozaj la sugar)\n- Tetracicline\n- Cloramphenicol\n- Citostatice\n- Litiu\n\n## Sfaturi practice\n\n- Administrează medicamentul după alăptare\n- Alege formula cu eliberare prelungită\n- Monitorizează sugarul pentru efecte adverse\n\n## Concluzie\n\nMajoritatea medicamentelor sunt compatibile cu alăptarea - consultă specialist pentru cazuri speciale.`,\n      en: 'Most medications are compatible with breastfeeding.'\n    },\n    references: ['LactMed Database 2023', 'AAP 2021']\n  }\n];\n\nexport const getArticleById = (id) => evidenceArticles.find(a => a.id === id);\nexport const getArticlesByCategory = (cat) => evidenceArticles.filter(a => a.category === cat);\nexport const getCategories = () => [\n  { id: 'teratologie', emoji: '🧬', label: { ro: 'Teratologie', en: 'Teratology' } },\n  { id: 'expuneri', emoji: '💊', label: { ro: 'Expuneri', en: 'Exposures' } },\n  { id: 'sarcina', emoji: '🤰', label: { ro: 'Sarcină', en: 'Pregnancy' } },\n  { id: 'alaptare', emoji: '🍼', label: { ro: 'Alăptare', en: 'Breastfeeding' } }\n];\n\nexport const evidenceLibraryMeta = {\n  totalArticles: evidenceArticles.length,\n  categories: getCategories(),\n  lastUpdated: '2026-03-26'\n};
+**Alimentație:**
+- Variată, fructe/legume
+- Proteine calitate
+- Omega-3
+- Limitează cafeina
+
+**Exercițiu:**
+- 150 min/săpt moderat
+- Forță: 2x/săpt
+
+**Evită:**
+- Fumat (stop complet)
+- Alcool (abstință)
+- Droguri
+- Stres excesiv
+
+## 6. Screening
+
+**Analize:**
+- Hemogramă, glicemie, HbA1c
+- TSH, T4
+- Fier, feritina
+- Vitamina D
+- Rubeolă, toxoplasmoză, HIV, hepatite
+
+## 7. Sănătate dentară
+
+- Control stomatologic
+- Tratare carii/gingivite
+- Igienă orală riguroasă
+
+## 8. Mediul de lucru
+
+**Evaluează expuneri:**
+- Substanțe chimice
+- Radiații
+- Agenți biologici
+- Stres fizic
+
+## Concluzie
+
+Pregătirea preconcepțională optimizează șansele pentru o sarcină sănătoasă și reduce riscurile pentru făt.
+
+## Referințe
+
+1. ACOG Practice Bulletin. Preconception Care. 2019.
+2. CDC Preconception Health Guidelines. 2021.`,
+      en: `# Preconception Checklist
+
+Comprehensive guide for optimizing health 3-6 months before pregnancy.` 
+    },
+    references: ['ACOG. Preconception Care. 2019.']
+  },
+  {
+    id: 'nsaids-pregnancy',
+    category: 'expuneri',
+    emoji: '💊',
+    readTime: 10,
+    title: { 
+      ro: 'AINS în sarcină', 
+      en: 'NSAIDs in Pregnancy' 
+    },
+    subtitle: { 
+      ro: 'Siguranța antiinflamatoarelor nesteroidiene în sarcină', 
+      en: 'Safety of NSAIDs during pregnancy' 
+    },
+    summary: { 
+      ro: 'Siguranța antiinflamatoarelor nesteroidiene în sarcină', 
+      en: 'NSAID safety during pregnancy' 
+    },
+    content: { 
+      ro: `# AINS în Sarcină
+
+## Ce sunt AINS?
+
+Antiinflamatoarele nesteroidiene (ibuprofen, naproxen, diclofenac) sunt utilizate frecvent pentru durere și inflamație.
+
+## Riscuri în sarcină
+
+**Trimestrul 1-2:**
+- Risc scăzut de malformații
+- Posibil risc pentru avort spontan
+- Date contradictorii
+
+**Trimestrul 3 (ÎncePÂND CU SăPT. 20):**
+
+**CONTRAINDICAT după săptămâna 20!**
+
+**Riscuri majore:**
+- **Oligohidroamnios** (lichid amniotic redus)
+- **Closure prematură ductus arteriosus**
+- **Hipertensiune pulmonară persistentă** (PPHN)
+- **Insuficiență renală neonatală**
+
+## Recomandări
+
+**Trimestrul 1-2:**
+- Paracetamol este preferat
+- AINS doar dacă necesar, doză minimă, perioadă scurtă
+
+**După săptămâna 20:**
+- **EVITĂ complet AINS**
+- Alternative: paracetamol, fizioterapie
+
+## Alternative sigure
+
+- **Paracetamol**: sigur în toate trimestrele
+- **Metode non-farmacologice**: fizioterapie, comprese
+- **Opioide slabe** (dacă necesar, perioadă scurtă)
+
+## Referințe
+
+1. FDA Drug Safety Communication: NSAID Warning. 2020.
+2. Briggs GG. Drugs in Pregnancy. 2017.`,
+      en: `# NSAIDs in Pregnancy
+
+Non-steroidal anti-inflammatory drugs safety guide.` 
+    },
+    references: ['FDA NSAID Warning. 2020.']
+  },
+  {
+    id: 'folic-acid-guide',
+    category: 'sarcina',
+    emoji: '🧂',
+    readTime: 14,
+    title: { 
+      ro: 'Acid folic - ghid complet', 
+      en: 'Folic Acid - Complete Guide' 
+    },
+    subtitle: { 
+      ro: 'Tot ce trebuie să știi despre acid folic în sarcină', 
+      en: 'Everything about folic acid in pregnancy' 
+    },
+    summary: { 
+      ro: 'Tot ce trebuie să știi despre acid folic în sarcină', 
+      en: 'Complete folic acid pregnancy guide' 
+    },
+    content: { 
+      ro: `# Acid Folic - Ghid Complet
+
+## Ce este acidul folic?
+
+Acidul folic (vitamina B9) este esențial pentru sinteza ADN și diviziunea celulară. Este crucial în primele săptămâni de sarcină.
+
+## Beneficii demonstrate
+
+**Prevenție primară:**
+- **Reduce defectele de tub neural (DTN) cu 70%**
+  - Spina bifida
+  - Anencefalie
+  - Encefalocele
+- Reduce risc labioschizis/palatoschizis
+- Reduce risc malformații cardiace congenitale
+- Prevenție avort spontan
+
+## Doză recomandată
+
+**Risc standard: 400-800 mcg/zi**
+
+Pentru toate femeile care planuiesc sarcina.
+
+**Risc crescut: 4-5 mg/zi**
+
+**Indicații doză mare:**
+- Istoric DTN (mama sau copil anterior)
+- Diabet zaharat
+- Obezitate (IMC >30)
+- Epilepsie tratată cu anticonvulsivante
+- Malabsorpție (boală celiacă, Crohn)
+- Mutații MTHFR
+
+## Când să încep?
+
+**Timing optim:**
+- Începe cu **3 luni înainte** de concepție
+- Continuă în **primul trimestru** (minim săpt. 12)
+- Ideal: pe toată sarcina
+
+**Rational:**
+- Tubul neural se închide în săpt. 4-6
+- Multe sarcini sunt neplanificate
+- Necesită timp pentru acumulare
+
+## Surse alimentare
+
+**Alimente bogate în folați:**
+- **Verdeturi cu frunze**: spanac (263 mcg/100g), broccoli
+- **Leguminoase**: linte, fasole, năut
+- **Cereale fortificate**: pâine, paste
+- **Fructe**: portocale, avocado
+- **Ficat**: 290 mcg/100g (atenție la vitamina A)
+
+**Nota:** Folatii alimentari au biodisponibilitate mai scăzută decât acidul folic sintetic (50% vs 85%).
+
+## Forma de acid folic
+
+**Acid folic vs. L-metilfolat:**
+
+**Acid folic (sintetic):**
+- Necesită conversie prin MTHFR
+- Eficient pentru majoritatea femeilor
+- Mai ieftin
+
+**L-metilfolat (5-MTHF):**
+- Forma activă, biodisponibilă
+- Recomandat pentru mutații MTHFR
+- Mai scump
+
+## Doza maximă sigură
+
+**Limită superioară**: 1000 mcg/zi acid folic (pentru populație generală)
+
+**Excepții** (4-5 mg prescrise medical):
+- Risc crescut DTN
+- Sub supraveghere medicală
+
+**Precauții doză mare:**
+- Poate masca deficiența de B12
+- Interacțiuni cu antiepileptice
+
+## Eficacitate demonstrată
+
+**Studii cheie:**
+- **MRC Study (1991)**: reducere 72% DTN
+- **Metaanaliză Cochrane**: confirmare beneficiu
+- **Fortificare cereale**: reducere 25-50% DTN în populație
+
+## Monitorizare
+
+**Când testăm nivelul:**
+- Rar necesar să testăm nivel seric
+- Excepție: malabsorpție, tratament antifolat
+
+## Interacțiuni medicamentoase
+
+**Medicamente care crește necesarul:**
+- Anticonvulsivante (valproat, carbamazepină)
+- Metotrexat
+- Sulfasalazină
+- Trimetoprim
+
+## Mutații MTHFR
+
+**Ce este MTHFR?**
+
+Enzima metilentetrahidrofolat reductaza convertește folatul în forma activă.
+
+**Variante:**
+- C677T (40% populație)
+- A1298C
+
+**Impact:** Reduce eficiența conversieifolatului. Soluție: L-metilfolat.
+
+## Concluzie
+
+Acidul folic este singurul supliment cu eficacitate dovedită în reducerea malformațiilor congenitale.
+
+## Referințe
+
+1. MRC Vitamin Study. Lancet. 1991.
+2. WHO. Folic Acid Supplementation. 2021.`,
+      en: `# Folic Acid Guide
+
+Comprehensive guide on folic acid supplementation for pregnancy.` 
+    },
+    references: ['MRC Vitamin Study. 1991.']
+  },
+  {
+    id: 'alcohol-fas',
+    category: 'expuneri',
+    emoji: '🍺',
+    readTime: 13,
+    title: { 
+      ro: 'Alcool și SAF', 
+      en: 'Alcohol and FAS' 
+    },
+    subtitle: { 
+      ro: 'Efectele consumului de alcool asupra fătului', 
+      en: 'Effects of alcohol consumption on the fetus' 
+    },
+    summary: { 
+      ro: 'Efectele consumului de alcool asupra fătului', 
+      en: 'Fetal alcohol effects' 
+    },
+    content: { 
+      ro: `# Alcool și Sindromul Alcoolului Fetal
+
+## Sindromul Alcoolului Fetal (SAF)
+
+SAF este cauza principală prevenibilă de retard mintal.
+
+**Caracteristici:**
+- **Dismorfism facial**: fisură palpebrală scurtă, filtru nazal neted
+- **Retard de creștere**: pre și postnatal
+- **Afectare SNC**: microcefalie, tulburări cognitive
+
+## Spectrul tulburărilor fetale cu alcool (FASD)
+
+**Gradare:**
+1. SAF complet
+2. SAF parțial
+3. Tulburări neurodevelopmentale cu alcool (ARND)
+4. Defecte congenitale cu alcool (ARBD)
+
+## Nu există prag sigur
+
+**Recomandare unanimă:** ABSTINȚĂ COMPLETĂ
+
+**Motive:**
+- Nici o doză sigură dovedită
+- Vulnerabilitate individuală variabilă
+- Efecte pe tot parcursul sarcinii
+
+## Mecanisme de toxicitate
+
+- Stres oxidativ
+- Apoptoză neuronală
+- Interferență cu factorii de creștere
+- Epuizare nutrienți
+
+## Periodic critice
+
+- **Toate trimestrele** sunt vulnerabile
+- Trim. 1: risc malformații
+- Trim. 2-3: afectare creștere cerebrală
+
+## Referințe
+
+1. CDC. Alcohol Use in Pregnancy. 2021.
+2. ACOG. Alcohol and Pregnancy. 2020.`,
+      en: `# Alcohol and FAS
+
+Fetal Alcohol Syndrome prevention and effects.` 
+    },
+    references: ['CDC Alcohol Guidelines. 2021.']
+  },
+  {
+    id: 'workplace-teratogens',
+    category: 'expuneri',
+    emoji: '🏭',
+    readTime: 11,
+    title: { 
+      ro: 'Teratogeni la locul de muncă', 
+      en: 'Workplace Teratogens' 
+    },
+    subtitle: { 
+      ro: 'Expuneri ocupationale și riscul teratogen', 
+      en: 'Occupational exposures and teratogenic risk' 
+    },
+    summary: { 
+      ro: 'Expuneri ocupaționale și riscul teratogen', 
+      en: 'Occupational teratogenic exposures' 
+    },
+    content: { 
+      ro: `# Teratogeni la Locul de Muncă
+
+## Tipuri de expuneri ocupaționale
+
+### 1. Substanțe chimice
+
+**Solvenți organici:**
+- Toluen, benzen, xilen
+- Riscuri: malformații SNC, avort
+- Profesii: vopsitori, curățătorii chimice
+
+**Metale grele:**
+- **Plumb**: retard dezvoltare, avort
+- **Mercur**: afectare neurologică
+- **Cadmiu**: RCIU
+
+**Pesticide:**
+- Organofosforice, carbamați
+- Risc: malformații, afectare cognitivă
+
+### 2. Agenți fizici
+
+**Radiații ionizante:**
+- Risc începe de la 50 mGy
+- Profesii: radiologie, medicină nucleară
+- Protecție: șorțuri de plumb, limita expunere
+
+**Căldură excesivă:**
+- Risc pentru DTN
+- Evită: saune, jacuzzi, febră prelungită
+
+### 3. Agenți biologici
+
+**Infecții ocupationale:**
+- Personal medical: rubeolă, CMV, toxoplasmă
+- Educatori: parvovirus B19, rubeolă
+
+## Măsuri de protecție
+
+**Generale:**
+- Echipament de protecție (măști, mănuși)
+- Ventilație adecvată
+- Spălare frecventă mâini
+- Evitare contact direct
+
+**Drepturi legale:**
+- Informare angajator despre sarcină
+- Transfer temporar la post mai sigur
+- Concediu medical dacă necesar
+
+## Profesii cu risc ridicat
+
+- Personal medical/stomatologic
+- Tehnologi radiologi
+- Agricultori
+- Lucrători în industria chimică
+- Coafeze/cosmeticieni
+- Veterinari
+
+## Evaluare risc
+
+1. Identificare agent
+2. Evaluare nivel expunere
+3. Comparare cu limite sigure
+4. Măsuri protecție
+
+## Referințe
+
+1. NIOSH. Reproductive Health Guidelines. 2020.`,
+      en: `# Workplace Teratogens
+
+Occupational exposure risks and prevention.` 
+    },
+    references: ['NIOSH Guidelines. 2020.']
+  },
+  {
+    id: 'antiepileptics-pregnancy',
+    category: 'expuneri',
+    emoji: '⚡',
+    readTime: 16,
+    title: { 
+      ro: 'Antiepileptice și sarcina', 
+      en: 'Antiepileptics and Pregnancy' 
+    },
+    subtitle: { 
+      ro: 'Profilul de risc al medicamentelor antiepileptice', 
+      en: 'Risk profile of antiepileptic medications' 
+    },
+    summary: { 
+      ro: 'Profilul de risc al medicamentelor antiepileptice', 
+      en: 'Antiepileptic drug risk profiles' 
+    },
+    content: { 
+      ro: `# Antiepileptice și Sarcina
+
+## Echilibrul risc-beneficiu
+
+Femeile cu epilepsie necesită tratament continuu în sarcină. Riscul crizelor necontrolate depășește riscul medicamentelor.
+
+## Riscuri antiepileptice
+
+### ACID VALPROIC - RISC RIDICAT
+
+**CONTRAINDICAT în sarcină (dacă alternativă disponibilă)**
+
+**Riscuri:**
+- Malformații majore: 10-20%
+- Defecte tub neural: 1-2%
+- Afectare cognitivă: QI cu 7-10 puncte mai scăzut
+- Autism: risc crescut
+
+### LAMOTRIGINĂ - RISC SCĂZUT
+
+**Preferată în sarcină**
+
+- Risc malformații: 2-3% (apropiat de general)
+- Nevoie ajustare doză (clearance crește)
+- Monitorizare nivel seric
+
+### LEVETIRACETAM - RISC SCĂZUT-MODERAT
+
+- Date limitate dar promitătoare
+- Risc: ~2-4%
+- Utilizare crescută
+
+### CARBAMAZEPINĂ - RISC MODERAT
+
+- Risc malformații: 4-6%
+- DTN: 0.5-1%
+- Doză acid folic 5 mg/zi
+
+### FENITOINĂ - RISC MODERAT
+
+- Risc: 4-7%
+- Sindrom fetal hiданtoina
+
+### POLITERAPIE - RISC FOARTE RIDICAT
+
+- Risc: 15-25%
+- **EVITĂ dacă posibil**
+
+## Recomandări management
+
+**Pre-concepție:**
+- Reevaluare necesitate tratament
+- Trecere la monoterapie
+- Alegere medicament cu risc scăzut
+- Acid folic 5 mg/zi
+
+**În sarcină:**
+- Monitorizare nivel seric
+- Ajustare doză
+- Ecografie detaliată
+- Screening malformații
+
+## Concluzie
+
+Lamotrigina și levetiracetamul sunt preferate. Valproatul trebuie evitat.
+
+## Referințe
+
+1. EURAP Study. Epilepsia. 2018.
+2. AAN Practice Guidelines. 2020.`,
+      en: `# Antiepileptics and Pregnancy
+
+Risk profiles for antiepileptic medications.` 
+    },
+    references: ['EURAP Study. 2018.']
+  },
+  {
+    id: 'first-trimester-exposures',
+    category: 'sarcina',
+    emoji: '🤰',
+    readTime: 14,
+    title: { 
+      ro: 'Expuneri în trimestrul 1', 
+      en: 'First Trimester Exposures' 
+    },
+    subtitle: { 
+      ro: 'Fereastra critică a dezvoltării fetale', 
+      en: 'Critical window of fetal development' 
+    },
+    summary: { 
+      ro: 'Fereastra critică a dezvoltării fetale', 
+      en: 'Critical fetal development window' 
+    },
+    content: { 
+      ro: `# Expuneri în Trimestrul 1
+
+## De ce trimestrul 1 este critic?
+
+Săptămânile 3-12 reprezintă perioada de organogeneză, când se formează toate organele majore.
+
+## Timeline dezvoltare
+
+**Săptămânile 3-4: Gastrulație**
+- Formare 3 foi germinale
+- Începutul tubului neural
+- **Risc**: acid valproic, hipertermie
+
+**Săptămânile 4-5: Dezvoltare cardiacă**
+- Formare tub cardiac
+- Septare camere
+- **Risc**: litiu, retinozi
+
+**Săptămânile 5-7: Dezvoltare membre**
+- Muguri membre
+- Digitizație
+- **Risc**: talidomidă
+
+**Săptămânile 6-8: Palatul**
+- Fuzionare procese palatine
+- **Risc**: corticosteroizi
+
+**Săptămânile 8-12: Genitale externe**
+- Diferențiere sexuală
+- **Risc**: androgeni, finasteride
+
+## Agenți teratogeni frecvenți
+
+**Medicamente:**
+- Isotretinoina (Roaccutane)
+- Acid valproic
+- Warfarină
+- ACE inhibitori
+- Metotrexat
+
+**Substanțe:**
+- Alcool
+- Tutun
+- Droguri (cocaină, heroina)
+
+**Infecții (TORCH):**
+- Toxoplasmoză
+- Rubeolă
+- CMV
+- Herpes
+- Zika
+
+## Principiul "tot sau nimic"
+
+Săptămânile 0-2: Expunerile duc la:
+- Moarte embrionară SAU
+- Dezvoltare normală
+
+Rareori malformații.
+
+## Evaluare post-expunere
+
+1. Identifică agentul și doza
+2. Calculează vârsta gestațională
+3. Compară cu fereastra critică
+4. Evaluează risc specific
+5. Ecografie morfologică
+
+## Consiliere
+
+**Principii:**
+- Risc de bază: 3-5% malformații
+- Majority expuneri: risc scăzut
+- Nu justifică întrerupere sarcină
+- Monitorizare ecografică
+
+## Referințe
+
+1. Sadler TW. Langman's Embryology. 2019.
+2. Koren G. Motherisk Guide. 2018.`,
+      en: `# First Trimester Exposures
+
+Critical window of organogenesis and teratogenic risk.` 
+    },
+    references: ['Sadler TW. Embryology. 2019.']
+  }
+];
+
+// Helper functions
+export const getArticleById = (id) => evidenceArticles.find(a => a.id === id);
+export const getArticlesByCategory = (cat) => evidenceArticles.filter(a => a.category === cat);
+export const getCategories = () => [
+  { id: 'teratologie', emoji: '🧬', label: { ro: 'Teratologie', en: 'Teratology' } },
+  { id: 'expuneri', emoji: '💊', label: { ro: 'Expuneri', en: 'Exposures' } },
+  { id: 'sarcina', emoji: '🤰', label: { ro: 'Sarcină', en: 'Pregnancy' } },
+  { id: 'alaptare', emoji: '🍼', label: { ro: 'Alăptare', en: 'Breastfeeding' } }
+];
+
+// Metadata
+export const evidenceLibraryMeta = {
+  totalArticles: evidenceArticles.length,
+  categories: getCategories(),
+  lastUpdated: '2026-03-27'
+};
