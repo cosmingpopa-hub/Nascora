@@ -254,29 +254,45 @@ function AppContent() {
             <span className="nascora-hamburger-line"/>
           </button>
 
-          {/* Nav Links */}
-          <div className={`nascora-nav-links ${menuOpen ? "open" : ""}`}>
+          {/* Desktop Nav Links — hidden on mobile via CSS */}
+          <div className="nascora-nav-desktop">
             <button onClick={()=>nav("checker")} className={`nascora-nav-link ${page==="checker"?"active":""}`}>{t.nav.riskChecker}</button>
             <button onClick={()=>nav("content")} className={`nascora-nav-link ${page==="content"?"active":""}`}>{t.nav.evidenceLibrary}</button>
-            <a href="/evidence" className="nascora-nav-link" onClick={()=>setMenuOpen(false)}>
+            <a href="/evidence" className="nascora-nav-link">
               <span style={{fontSize:14}}>📚</span>{lang==="ro"?"Evidență":"Evidence"}
             </a>
-            <a href="/preconception-checklist" className="nascora-nav-link" onClick={()=>setMenuOpen(false)}>
+            <a href="/preconception-checklist" className="nascora-nav-link">
               <span style={{fontSize:14}}>📋</span>{checklistNavLabel}
             </a>
-            <a href="/calculator" className="nascora-nav-link" onClick={()=>setMenuOpen(false)}>
+            <a href="/calculator" className="nascora-nav-link">
               <span style={{fontSize:14}}>🤰</span>{lang==="ro"?"Calculator":"Calculator"}
             </a>
-            <div className="nascora-lang-toggle">
-              <LangToggle/>
-            </div>
+            <LangToggle/>
             <button onClick={()=>nav("landing")} className="nascora-nav-cta">{t.nav.joinWaitlist}</button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile overlay to close menu on tap outside */}
-      {menuOpen && <div className="nascora-mobile-overlay active" onClick={()=>setMenuOpen(false)}/>}
+      {/* ===== MOBILE MENU — outside nav to avoid backdrop-filter containing block ===== */}
+      {menuOpen && (
+        <div className="nascora-mobile-menu-overlay" onClick={()=>setMenuOpen(false)}>
+          <div className="nascora-mobile-menu" onClick={e=>e.stopPropagation()}>
+            <button onClick={()=>nav("checker")} className={`nascora-mobile-link ${page==="checker"?"active":""}`}>{t.nav.riskChecker}</button>
+            <button onClick={()=>nav("content")} className={`nascora-mobile-link ${page==="content"?"active":""}`}>{t.nav.evidenceLibrary}</button>
+            <a href="/evidence" className="nascora-mobile-link" onClick={()=>setMenuOpen(false)}>
+              <span style={{fontSize:16}}>📚</span>{lang==="ro"?"Evidență":"Evidence"}
+            </a>
+            <a href="/preconception-checklist" className="nascora-mobile-link" onClick={()=>setMenuOpen(false)}>
+              <span style={{fontSize:16}}>📋</span>{checklistNavLabel}
+            </a>
+            <a href="/calculator" className="nascora-mobile-link" onClick={()=>setMenuOpen(false)}>
+              <span style={{fontSize:16}}>🤰</span>{lang==="ro"?"Calculator":"Calculator"}
+            </a>
+            <div style={{marginTop:8}}><LangToggle/></div>
+            <button onClick={()=>nav("landing")} className="nascora-mobile-cta">{t.nav.joinWaitlist}</button>
+          </div>
+        </div>
+      )}
 
       {/* ===== MAIN CONTENT ===== */}
       <main>
