@@ -1,4 +1,6 @@
 /* ===== NASCORA — Global Responsive Styles ===== */
+/* Fix: Mobile menu is rendered OUTSIDE <nav> to avoid
+   backdrop-filter creating a containing block for position:fixed */
 
 /* Reset & Base */
 *, *::before, *::after {
@@ -41,7 +43,6 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 110;
 }
 
 .nascora-nav-logo-text {
@@ -51,8 +52,8 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* Desktop nav links */
-.nascora-nav-links {
+/* Desktop nav links container */
+.nascora-nav-desktop {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -65,7 +66,7 @@ body {
   border: none;
   cursor: pointer;
   padding: 8px;
-  z-index: 110;
+  z-index: 210;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -103,7 +104,7 @@ body {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Nav link base style */
+/* Nav link base style (desktop) */
 .nascora-nav-link {
   padding: 8px 16px;
   border-radius: 8px;
@@ -146,6 +147,85 @@ body {
 }
 
 .nascora-nav-cta:hover {
+  background: #1B4965;
+}
+
+/* ===== MOBILE MENU (rendered outside <nav>) ===== */
+.nascora-mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  background: rgba(13, 27, 42, 0.4);
+  animation: fadeIn 0.15s ease;
+}
+
+.nascora-mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 201;
+  background: rgba(250, 251, 252, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 80px 32px 40px;
+  overflow-y: auto;
+  animation: fadeIn 0.2s ease;
+}
+
+.nascora-mobile-link {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 24px;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid #F3F4F6;
+  background: #fff;
+  color: #6B7280;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.nascora-mobile-link:hover,
+.nascora-mobile-link.active {
+  background: rgba(95,168,211,0.1);
+  border-color: rgba(95,168,211,0.3);
+  color: #1B4965;
+}
+
+.nascora-mobile-cta {
+  margin-top: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  border-radius: 12px;
+  border: none;
+  background: #0D1B2A;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nascora-mobile-cta:hover {
   background: #1B4965;
 }
 
@@ -340,86 +420,18 @@ body {
   to { opacity: 1; }
 }
 
-/* ===== MOBILE OVERLAY ===== */
-.nascora-mobile-overlay {
-  display: none;
-}
-
 /* =====================================================
-   RESPONSIVE — TABLET (<768px)
+   RESPONSIVE — TABLET & MOBILE (<768px)
    ===================================================== */
 @media (max-width: 767px) {
 
-  /* Show hamburger */
+  /* Show hamburger, hide desktop nav */
   .nascora-hamburger {
     display: flex;
   }
 
-  /* Hide desktop nav links */
-  .nascora-nav-links {
+  .nascora-nav-desktop {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(250, 251, 252, 0.98);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 80px 32px 40px;
-    z-index: 105;
-    overflow-y: auto;
-  }
-
-  .nascora-nav-links.open {
-    display: flex;
-    animation: fadeIn 0.2s ease;
-  }
-
-  /* Mobile nav links — bigger tap targets */
-  .nascora-nav-links .nascora-nav-link {
-    font-size: 18px;
-    padding: 14px 24px;
-    width: 100%;
-    max-width: 320px;
-    justify-content: center;
-    border-radius: 12px;
-    border: 1px solid #F3F4F6;
-    background: #fff;
-  }
-
-  .nascora-nav-links .nascora-nav-link:hover,
-  .nascora-nav-links .nascora-nav-link.active {
-    background: rgba(95,168,211,0.1);
-    border-color: rgba(95,168,211,0.3);
-  }
-
-  .nascora-nav-links .nascora-nav-cta {
-    margin-left: 0;
-    margin-top: 8px;
-    padding: 14px 32px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
-    border-radius: 12px;
-  }
-
-  .nascora-nav-links .nascora-lang-toggle {
-    margin-top: 8px;
-  }
-
-  /* Mobile overlay for body scroll lock */
-  .nascora-mobile-overlay.active {
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    background: transparent;
   }
 
   /* Hero adjustments */
@@ -545,7 +557,6 @@ body {
     padding: 12px 16px !important;
   }
 
-  /* Pre-conception checklist link text */
   .nascora-checklist-btn span:first-of-type {
     font-size: 16px !important;
   }
