@@ -4,6 +4,7 @@ import { LangProvider, useLang, loc } from "@/lib/lang";
 import { TERATOGEN_DB, ARTICLES } from "@/data/content";
 import CookieConsent from "@/components/CookieConsent";
 import LangToggle from "@/components/LangToggle";
+import Script from "next/script";
 
 const C = { midnight: "#0D1B2A", ocean: "#1B4965", teal: "#5FA8D3", coral: "#E07A5F", sage: "#81B29A", cream: "#F4F1DE", safeGreen: "#22C55E", cautionAmber: "#F59E0B", riskRed: "#EF4444", gray: "#9CA3AF" };
 
@@ -51,8 +52,6 @@ function RiskCard({ s }) {
 
 function Landing({ onNav }) {
   const { t, lang } = useLang();
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
   const checklistLabel = lang === "en" ? "Pre-Conception Checklist" : "Ghid Pre-Concepție";
   return (
     <div>
@@ -127,29 +126,24 @@ function Landing({ onNav }) {
         </div>
       </section>
 
-      {/* Newsletter */}
+      {/* Newsletter — Beehiiv */}
       <section id="nascora-newsletter" style={{padding:"80px 24px",textAlign:"center"}}>
         <div style={{maxWidth:520,margin:"0 auto"}}>
           <h2 style={{fontSize:28,fontWeight:700,color:C.midnight,margin:"0 0 12px"}}>{t.waitlist.title}</h2>
           <p style={{fontSize:15,color:C.gray,margin:"0 0 28px",lineHeight:1.6}}>{t.waitlist.description}</p>
           
-          {/* ============================================
-              BEEHIIV EMBED — ÎNLOCUIEȘTE COMENTARIUL DE MAI JOS
-              CU CODUL EMBED DIN BEEHIIV DASHBOARD:
-              Settings → Subscribe Forms → Create new form → Copy embed code
-              
-              Lipește codul HTML aici, între div-urile de mai jos.
-              Exemplu:
-              <iframe src="https://embeds.beehiiv.com/xxxxx" data-test-id="beehiiv-embed" width="100%" height="320" frameBorder="0" scrolling="no" style={{borderRadius:12,border:"1px solid #E5E7EB",margin:0}}></iframe>
-              ============================================ */}
-          <div className="nascora-newsletter-form" style={{maxWidth:480,margin:"0 auto"}}>
-            {/* Formular temporar — va fi înlocuit cu embed Beehiiv */}
-            <div className="nascora-waitlist-form">
-              <input type="email" placeholder={t.waitlist.placeholder} value={email} onChange={e=>setEmail(e.target.value)} style={{flex:1,padding:"12px 16px",borderRadius:10,border:"1.5px solid #E5E7EB",fontSize:15,outline:"none",boxSizing:"border-box"}}/>
-              <button onClick={()=>{if(email.includes("@"))setSubmitted(true);}} style={{padding:"12px 24px",background:C.coral,color:"#fff",border:"none",borderRadius:10,fontSize:15,fontWeight:600,cursor:"pointer",whiteSpace:"nowrap"}}>{t.waitlist.button}</button>
-            </div>
-            {submitted&&<div style={{marginTop:16,padding:16,background:C.sage+"15",borderRadius:12,border:`1px solid ${C.sage}30`}}><p style={{margin:0,color:"#065F46",fontWeight:500,fontSize:14}}>{t.waitlist.success}</p></div>}
+          <div style={{maxWidth:480,margin:"0 auto",display:"flex",justifyContent:"center"}}>
+            <iframe 
+              src="https://subscribe-forms.beehiiv.com/eacdbe3b-a8fb-4fe2-90d1-6876004048ed" 
+              className="beehiiv-embed"
+              data-test-id="beehiiv-embed" 
+              frameBorder="0" 
+              scrolling="no" 
+              style={{width:"100%",maxWidth:480,height:320,margin:0,borderRadius:12,backgroundColor:"transparent",border:"none"}}
+            />
           </div>
+          <Script src="https://subscribe-forms.beehiiv.com/embed.js" strategy="lazyOnload"/>
+          <Script src="https://subscribe-forms.beehiiv.com/attribution.js" strategy="lazyOnload"/>
           <p style={{fontSize:12,color:"#D1D5DB",marginTop:16}}>{lang==="en"?"No spam. Unsubscribe anytime.":"Fără spam. Te poți dezabona oricând."}</p>
         </div>
       </section>
