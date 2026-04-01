@@ -64,8 +64,8 @@ function Landing({ onNav }) {
           <h1>{t.hero.title1} <span style={{color:C.teal}}>{t.hero.titleAccent}</span></h1>
           <p className="nascora-hero-desc">{t.hero.description}</p>
           <div className="nascora-hero-buttons">
-            <button onClick={()=>onNav("checker")} style={{padding:"14px 32px",background:C.midnight,color:"#fff",border:"none",borderRadius:10,fontSize:16,fontWeight:600,cursor:"pointer"}}>{t.hero.ctaPrimary}</button>
-            <button onClick={()=>onNav("content")} style={{padding:"14px 32px",background:"transparent",color:C.ocean,border:`1.5px solid ${C.ocean}30`,borderRadius:10,fontSize:16,fontWeight:500,cursor:"pointer"}}>{t.hero.ctaSecondary}</button>
+            <button onClick={()=>onNav("checker")} style={{padding:"14px 32px",background:C.coral,color:"#fff",border:"none",borderRadius:10,fontSize:16,fontWeight:600,cursor:"pointer"}}>{t.hero.ctaPrimary}</button>
+            <button onClick={()=>{document.getElementById("nascora-newsletter")?.scrollIntoView({behavior:"smooth"});}} style={{padding:"14px 32px",background:"transparent",color:C.ocean,border:`1.5px solid ${C.ocean}30`,borderRadius:10,fontSize:16,fontWeight:500,cursor:"pointer"}}>{t.hero.ctaSecondary}</button>
           </div>
 
           {/* Pre-Conception Checklist Button */}
@@ -127,16 +127,30 @@ function Landing({ onNav }) {
         </div>
       </section>
 
-      {/* Waitlist */}
-      <section style={{padding:"80px 24px",textAlign:"center"}}>
-        <div style={{maxWidth:480,margin:"0 auto"}}>
+      {/* Newsletter */}
+      <section id="nascora-newsletter" style={{padding:"80px 24px",textAlign:"center"}}>
+        <div style={{maxWidth:520,margin:"0 auto"}}>
           <h2 style={{fontSize:28,fontWeight:700,color:C.midnight,margin:"0 0 12px"}}>{t.waitlist.title}</h2>
           <p style={{fontSize:15,color:C.gray,margin:"0 0 28px",lineHeight:1.6}}>{t.waitlist.description}</p>
-          {submitted?(<div style={{padding:20,background:C.sage+"15",borderRadius:12,border:`1px solid ${C.sage}30`}}><p style={{margin:0,color:"#065F46",fontWeight:500}}>{t.waitlist.success}</p></div>):(
-          <div className="nascora-waitlist-form">
-            <input type="email" placeholder={t.waitlist.placeholder} value={email} onChange={e=>setEmail(e.target.value)} style={{flex:1,padding:"12px 16px",borderRadius:10,border:"1.5px solid #E5E7EB",fontSize:15,outline:"none",boxSizing:"border-box"}}/>
-            <button onClick={()=>{if(email.includes("@"))setSubmitted(true);}} style={{padding:"12px 24px",background:C.teal,color:"#fff",border:"none",borderRadius:10,fontSize:15,fontWeight:600,cursor:"pointer",whiteSpace:"nowrap"}}>{t.waitlist.button}</button>
-          </div>)}
+          
+          {/* ============================================
+              BEEHIIV EMBED — ÎNLOCUIEȘTE COMENTARIUL DE MAI JOS
+              CU CODUL EMBED DIN BEEHIIV DASHBOARD:
+              Settings → Subscribe Forms → Create new form → Copy embed code
+              
+              Lipește codul HTML aici, între div-urile de mai jos.
+              Exemplu:
+              <iframe src="https://embeds.beehiiv.com/xxxxx" data-test-id="beehiiv-embed" width="100%" height="320" frameBorder="0" scrolling="no" style={{borderRadius:12,border:"1px solid #E5E7EB",margin:0}}></iframe>
+              ============================================ */}
+          <div className="nascora-newsletter-form" style={{maxWidth:480,margin:"0 auto"}}>
+            {/* Formular temporar — va fi înlocuit cu embed Beehiiv */}
+            <div className="nascora-waitlist-form">
+              <input type="email" placeholder={t.waitlist.placeholder} value={email} onChange={e=>setEmail(e.target.value)} style={{flex:1,padding:"12px 16px",borderRadius:10,border:"1.5px solid #E5E7EB",fontSize:15,outline:"none",boxSizing:"border-box"}}/>
+              <button onClick={()=>{if(email.includes("@"))setSubmitted(true);}} style={{padding:"12px 24px",background:C.coral,color:"#fff",border:"none",borderRadius:10,fontSize:15,fontWeight:600,cursor:"pointer",whiteSpace:"nowrap"}}>{t.waitlist.button}</button>
+            </div>
+            {submitted&&<div style={{marginTop:16,padding:16,background:C.sage+"15",borderRadius:12,border:`1px solid ${C.sage}30`}}><p style={{margin:0,color:"#065F46",fontWeight:500,fontSize:14}}>{t.waitlist.success}</p></div>}
+          </div>
+          <p style={{fontSize:12,color:"#D1D5DB",marginTop:16}}>{lang==="en"?"No spam. Unsubscribe anytime.":"Fără spam. Te poți dezabona oricând."}</p>
         </div>
       </section>
     </div>
@@ -268,7 +282,7 @@ function AppContent() {
               <span style={{fontSize:14}}>🤰</span>{lang==="ro"?"Calculator":"Calculator"}
             </a>
             <LangToggle/>
-            <button onClick={()=>nav("landing")} className="nascora-nav-cta">{t.nav.joinWaitlist}</button>
+            <button onClick={()=>nav("checker")} className="nascora-nav-cta">{t.nav.joinWaitlist}</button>
           </div>
         </div>
       </nav>
@@ -289,7 +303,7 @@ function AppContent() {
               <span style={{fontSize:16}}>🤰</span>{lang==="ro"?"Calculator":"Calculator"}
             </a>
             <div style={{marginTop:8}}><LangToggle/></div>
-            <button onClick={()=>nav("landing")} className="nascora-mobile-cta">{t.nav.joinWaitlist}</button>
+            <button onClick={()=>nav("checker")} className="nascora-mobile-cta">{t.nav.joinWaitlist}</button>
           </div>
         </div>
       )}
