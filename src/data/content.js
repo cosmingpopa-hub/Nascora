@@ -29,7 +29,7 @@ export const translations = {
       items: [
         { title: "Verificator de risc", desc: "Caută orice substanță și primești instant profilul de risc, cu analiză pe trimestre și alternative mai sigure. 500+ substanțe în baza de date." },
         { title: "Ghiduri bazate pe dovezi", desc: "Articole scrise pe înțelesul tău despre medicamente, suplimente și expuneri. Fiecare informație vine din studii medicale reale." },
-        { title: "Verificat de specialiști", desc: "Construită în colaborare cu specialiști OB-GYN și cercetători în embriologie de la UMF Iași. Nu e un blog, e un instrument medical." },
+        { title: "Verificat de specialiști", desc: "Creat cu ajutorul medicilor specialiști, pentru ca tu să ai acces la informații corecte și verificate despre sarcină." },
       ],
     },
     waitlist: {
