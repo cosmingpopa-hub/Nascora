@@ -8,6 +8,18 @@ import Script from "next/script";
 
 const C = { midnight: "#0D1B2A", ocean: "#1B4965", teal: "#5FA8D3", coral: "#E07A5F", sage: "#81B29A", cream: "#F4F1DE", safeGreen: "#22C55E", cautionAmber: "#F59E0B", riskRed: "#EF4444", gray: "#9CA3AF" };
 
+// Analytics helper — sends events to GA4 + Meta Pixel
+function trackEvent(eventName, params = {}) {
+  // GA4
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", eventName, params);
+  }
+  // Meta Pixel
+  if (typeof window !== "undefined" && window.fbq) {
+    window.fbq("trackCustom", eventName, params);
+  }
+}
+
 function getRiskColor(r) { return r==="safe"||r==="low"?C.safeGreen:r==="moderate"?C.cautionAmber:r==="high"?C.riskRed:C.gray; }
 
 function Shield({ size=20, color=C.teal }) {
@@ -63,8 +75,8 @@ function Landing({ onNav }) {
           <h1>{t.hero.title1} <span style={{color:C.teal}}>{t.hero.titleAccent}</span></h1>
           <p className="nascora-hero-desc">{t.hero.description}</p>
           <div className="nascora-hero-buttons">
-            <button onClick={()=>onNav("checker")} style={{padding:"14px 32px",background:C.coral,color:"#fff",border:"none",borderRadius:10,fontSize:16,fontWeight:600,cursor:"pointer"}}>{t.hero.ctaPrimary}</button>
-            <button onClick={()=>{document.getElementById("nascora-newsletter")?.scrollIntoView({behavior:"smooth"});}} style={{padding:"14px 32px",background:"transparent",color:C.ocean,border:`1.5px solid ${C.ocean}30`,borderRadius:10,fontSize:16,fontWeight:500,cursor:"pointer"}}>{t.hero.ctaSecondary}</button>
+            <button onClick={()=>{trackEvent("click_cta_checker",{location:"hero"});onNav("checker");}} style={{padding:"14px 32px",background:C.coral,color:"#fff",border:"none",borderRadius:10,fontSize:16,fontWeight:600,cursor:"pointer"}}>{t.hero.ctaPrimary}</button>
+            <button onClick={()=>{trackEvent("click_cta_newsletter",{location:"hero"});document.getElementById("nascora-newsletter")?.scrollIntoView({behavior:"smooth"});}} style={{padding:"14px 32px",background:"transparent",color:C.ocean,border:`1.5px solid ${C.ocean}30`,borderRadius:10,fontSize:16,fontWeight:500,cursor:"pointer"}}>{t.hero.ctaSecondary}</button>
           </div>
 
           {/* Pre-Conception Checklist Button */}
@@ -181,7 +193,7 @@ function Checker() {
           style={{width:"100%",padding:"16px 16px 16px 48px",borderRadius:14,border:"2px solid #E5E7EB",fontSize:17,outline:"none",background:"#fff",boxSizing:"border-box"}}/>
       </div>
       {!query&&!selected&&(<div><p style={{fontSize:13,color:C.gray,fontWeight:500,textTransform:"uppercase",letterSpacing:".06em",marginBottom:12}}>{t.checker.commonSearches}</p><div className="nascora-quick-searches">{quickSearches.map(s=><button key={s} onClick={()=>setQuery(s)} style={{padding:"8px 16px",borderRadius:8,border:"1px solid #E5E7EB",background:"#FAFAFA",fontSize:13,cursor:"pointer",color:C.ocean,fontWeight:500}}>{s}</button>)}</div></div>)}
-      {query&&!selected&&results.length>0&&(<div style={{display:"flex",flexDirection:"column",gap:8}}>{results.map(s=><button key={s.id} onClick={()=>setSelected(s)} style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 18px",borderRadius:12,border:"1px solid #F3F4F6",background:"#fff",cursor:"pointer",textAlign:"left",width:"100%"}}><div><div style={{fontSize:15,fontWeight:600,color:C.midnight}}>{loc(s.name,lang)}</div><div style={{fontSize:12,color:C.gray,marginTop:2}}>{loc(s.category,lang)}</div></div><RiskBadge risk={s.risk}/></button>)}</div>)}
+      {query&&!selected&&results.length>0&&(<div style={{display:"flex",flexDirection:"column",gap:8}}>{results.map(s=><button key={s.id} onClick={()=>{setSelected(s);trackEvent("view_risk_result",{substance:s.generic,risk:s.risk,category:loc(s.category,lang)});if(window.fbq)window.fbq("track","Search",{search_string:s.generic});}} style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 18px",borderRadius:12,border:"1px solid #F3F4F6",background:"#fff",cursor:"pointer",textAlign:"left",width:"100%"}}><div><div style={{fontSize:15,fontWeight:600,color:C.midnight}}>{loc(s.name,lang)}</div><div style={{fontSize:12,color:C.gray,marginTop:2}}>{loc(s.category,lang)}</div></div><RiskBadge risk={s.risk}/></button>)}</div>)}
       {query&&results.length===0&&!selected&&(<div style={{textAlign:"center",padding:40}}><p style={{fontSize:15,color:C.gray}}>{t.checker.noResults} &quot;{query}&quot;</p></div>)}
       {selected&&<RiskCard s={selected}/>}
       {selected&&<button onClick={()=>{setSelected(null);setQuery("");}} style={{marginTop:16,padding:"10px 20px",borderRadius:8,border:`1px solid ${C.ocean}30`,background:"transparent",color:C.ocean,fontSize:14,fontWeight:500,cursor:"pointer",width:"100%",maxWidth:280}}>{t.checker.searchAnother}</button>}
@@ -218,7 +230,7 @@ function AppContent() {
   const [page, setPage] = useState("landing");
   const [menuOpen, setMenuOpen] = useState(false);
   
-  const nav = (p) => { setPage(p); setMenuOpen(false); window.scrollTo({top:0,behavior:"smooth"}); };
+  const nav = (p) => { setPage(p); setMenuOpen(false); window.scrollTo({top:0,behavior:"smooth"}); trackEvent("navigate_section",{section:p}); };
   const checklistNavLabel = lang === "en" ? "Pre-Conception" : "Pre-Concepție";
 
   // Lock body scroll when mobile menu is open
